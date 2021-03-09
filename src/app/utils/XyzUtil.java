@@ -1,5 +1,10 @@
 package app.utils;
 
+import javafx.collections.ObservableList;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class XyzUtil {
 
     private String name;
@@ -36,6 +41,37 @@ public class XyzUtil {
         this.sixthMonth = sixthMonth;
         this.variation = variation;
         this.group = group;
+    }
+
+    public List<Double>  getVariationToTable(ObservableList<XyzUtil> xyzUtils) {
+        List<Double> result = new ArrayList<>();
+
+        for (XyzUtil x : xyzUtils ) {
+            double arithmetic = (double) (x.getFirstMonth() + x.getSecondMonth()
+                    + x.getThirdMonth() + x.getFourthMonth() + x.getFifthMonth() + x.getSixthMonth()) / 6;
+            double preSigma =    (Math.pow((x.getFirstMonth() - arithmetic), 2) + Math.pow((x.getSecondMonth() - arithmetic), 2) + Math.pow((x.getThirdMonth() - arithmetic), 2) +
+                    Math.pow((x.getFourthMonth() - arithmetic), 2) + Math.pow((x.getFifthMonth() - arithmetic), 2) + Math.pow((x.getSixthMonth() - arithmetic), 2)) / 6;
+            double sigma = Math.sqrt(preSigma);
+            double variation = sigma / arithmetic;
+            result.add(variation);
+        }
+        return result;
+    }
+
+    public List<Character> sortByGroups(List<Double> variations) {
+        List<Character> result = new ArrayList<>();
+
+        for (Double  number : variations) {
+            if (number >= 0 && number <= 0.1) {
+                result.add('X');
+            } else if (number >= 0.1 && number <= 0.25) {
+                result.add('Y');
+            } else if (number >= 0.25 && number <= 1) {
+                result.add('Z');
+            }
+        }
+
+        return result;
     }
 
     public String getName() { return name; }

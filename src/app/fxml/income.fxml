@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controllers.IncomeController">
+   <children>
+      <TextField fx:id="textFieldEnterCompany" layoutX="341.0" layoutY="93.0" promptText="Enter name of company" />
+      <TextField fx:id="textFieldEnterIncome" layoutX="341.0" layoutY="157.0" promptText="Enter income" />
+      <TextField fx:id="textFieldEnterDate" layoutX="341.0" layoutY="221.0" prefHeight="25.0" prefWidth="149.0" promptText="Enter date" />
+      <Text layoutX="164.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter an income for the month" wrappingWidth="272.13671875">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <Text layoutX="341.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Company name:" wrappingWidth="119.13671875" />
+      <Text layoutX="341.0" layoutY="153.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Income:" wrappingWidth="119.13671046495438" />
+      <Text layoutX="341.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date:" wrappingWidth="119.13671046495438" />
+      <Button fx:id="btnAdd" layoutX="372.0" layoutY="280.0" mnemonicParsing="false" onMouseClicked="#onAddButtonClick" prefHeight="25.0" prefWidth="88.0" text="Add" />
+      <Button fx:id="btnBack" layoutX="372.0" layoutY="330.0" mnemonicParsing="false" onMouseClicked="#onBackButtonClick" prefHeight="25.0" prefWidth="88.0" text="Back" />
+      <Text layoutX="68.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please enter the date as in the example. Example: yyyy/MM/dd " wrappingWidth="191.755859375" />
+   </children>
+</AnchorPane>

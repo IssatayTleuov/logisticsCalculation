@@ -17,7 +17,8 @@
             <TableColumn fx:id="colGroup" prefWidth="75.0" text="Group" />
         </columns>
       </TableView>
-      <Button fx:id="btnShowAbc" layoutX="261.0" layoutY="325.0" mnemonicParsing="false" text="Show result" />
-      <Text layoutX="241.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter data in the table" />
+      <Button fx:id="btnDoCalAbc" layoutX="411.0" layoutY="325.0" mnemonicParsing="false" onMouseClicked="#onMouseClickShowResult" text="Do calculation" visible="false" />
+       <Button fx:id="btnPopulateTableAbc" layoutX="112.0" layoutY="325.0" mnemonicParsing="false" onMouseClicked="#onMouseClickShowTable" text="Populate table" />
+       <Text layoutX="241.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter data in the table" />
    </children>
 </AnchorPane>

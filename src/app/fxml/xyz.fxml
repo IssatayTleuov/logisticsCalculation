@@ -15,13 +15,14 @@
           <TableColumn fx:id="colFirstMonth" prefWidth="75.0" text="Month - 1" />
             <TableColumn fx:id="colSecondMonth" prefWidth="75.0" text="Month - 2" />
             <TableColumn fx:id="colThirdMonth" prefWidth="75.0" text="Month - 3" />
-            <TableColumn fx:id="colFiourthMonth" prefWidth="75.0" text="Month - 4" />
+            <TableColumn fx:id="colFourthMonth" prefWidth="75.0" text="Month - 4" />
             <TableColumn fx:id="colFifthMonth" prefWidth="75.0" text="Month - 5" />
             <TableColumn fx:id="colSixthMonth" prefWidth="75.0" text="Month - 6" />
-            <TableColumn fx:id="colVariation" prefWidth="75.0" text="Variation" />
-            <TableColumn fx:id="colGroup" prefWidth="75.0" text="Group" />
+            <TableColumn fx:id="colVariation" prefWidth="75.0" text="Variation" visible="false"/>
+            <TableColumn fx:id="colGroup" prefWidth="75.0" text="Group" visible="false"/>
         </columns>
       </TableView>
-      <Button fx:id="btnShowXyz" layoutX="333.0" layoutY="311.0" mnemonicParsing="false" text="Show results" />
+      <Button fx:id="btnDoCalXyz" layoutX="376.0" layoutY="296.0" mnemonicParsing="false" onMouseClicked="#onMouseClickShowResult" text="Do calculation" visible="false"/>
+      <Button fx:id="btnPopulateTableXyz" layoutX="189.0" layoutY="296.0" mnemonicParsing="false" onMouseClicked="#onMouseClickShowTable" text="Populate table" />
    </children>
 </AnchorPane>

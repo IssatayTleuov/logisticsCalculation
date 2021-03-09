@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="629.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controllers.AbcTestController">
+   <children>
+      <TextField fx:id="textFieldBeginDate" layoutX="225.0" layoutY="83.0" promptText="Enter begin date" />
+      <TextField fx:id="textFieldEndDate" layoutX="225.0" layoutY="140.0" promptText="Enter end date'" />
+      <Text layoutX="207.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ABC analysis" textAlignment="CENTER" wrappingWidth="176.140625">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text layoutX="226.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Begin date:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="225.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" text="End date:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="226.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose companies:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Button fx:id="btnShowResult" layoutX="240.0" layoutY="299.0" mnemonicParsing="false" onMouseClicked="#onShowButtonClick" prefHeight="25.0" prefWidth="120.0" text="Show result" />
+      <Button fx:id="btnBack" layoutX="241.0" layoutY="346.0" mnemonicParsing="false" onMouseClicked="#onBackButtonClick" prefHeight="25.0" prefWidth="120.0" text="Back" />
+      <Button fx:id="btnPopulate" layoutX="414.0" layoutY="193.0" mnemonicParsing="false" onMouseClicked="#onPopulateButtonClick" prefHeight="25.0" prefWidth="120.0" text="Populate list" />
+      <ListView fx:id="listViewCompany" layoutX="14.0" layoutY="74.0" prefHeight="200.0" prefWidth="200.0" />
+      <ComboBox fx:id="comboBoxCompany" layoutX="225.0" layoutY="193.0" prefWidth="150.0" />
+      <Button fx:id="btnDelete" layoutX="88.0" layoutY="299.0" mnemonicParsing="false" text="Delete" />
+      <Text layoutX="383.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please enter the date as in the example. Example: yyyy/MM/dd" wrappingWidth="219.39453125" />
+   </children>
+</AnchorPane>
